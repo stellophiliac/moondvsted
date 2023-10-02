@@ -1,0 +1,92 @@
+@import url(https://unpkg.com/@catppuccin/palette@0.1.4/css/catppuccin.css);
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+body {
+    background-color: var(--ctp-macchiato-base);
+    padding: 0;
+    margin: 0;
+
+    font-size: 1em;
+    font-family: "Jetbrains Mono", monospace;
+    color: var(--ctp-macchiato-text)
+}
+
+#wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+}
+
+#headertxt {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(to right, var(--ctp-macchiato-pink), var(--ctp-macchiato-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px
+}
+
+main, header {
+    padding: 1em
+}
+
+a {
+    color:var(--ctp-macchiato-mauve);
+    text-decoration:none
+}
+
+a:hover {
+    color:var(--ctp-macchiato-pink);
+    text-decoration:underline
+}
+
+/* home btn */
+
+#back_home {
+    position:fixed;
+    bottom: 0;
+    left:0;
+    padding:0.5em
+}
+
+/* selection colors */
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: var(--ctp-macchiato-base);
+    background: var(--ctp-macchiato-mauve);
+}
+
+::selection {
+    color: var(--ctp-macchiato-base);
+    background: var(--ctp-macchiato-mauve);
+}
+
+
+/* OCTOTHORPS FUCK YES */
+
+h1:first-child {
+    margin-top: 0;
+}
+
+h1::before {
+    content: '# ';
+    color: var(--ctp-macchiato-pink)
+}
+
+h2::before {
+    content: '## ';
+    color: var(--ctp-macchiato-mauve)
+}
+
+h3::before {
+    content: '### ';
+    color: var(--ctp-macchiato-blue)
+}
+
+h1 {
+    margin-bottom: 0.5em
+}

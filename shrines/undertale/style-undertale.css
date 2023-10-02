@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Determination';
+    src: url(./DTM-Sans.ttf)
+}
+
+:root {
+    --yellow: #F7FF00
+}
+
+html {
+    height: 100%
+}
+
+body {
+    background-image: url(https://static.wikia.nocookie.net/undertale/images/0/08/Site-background-dark);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    color: white;
+    font-family: 'Determination';
+    font-size: 18px;
+    line-height: 1.5em
+}
+
+#wrapper {
+    background-color: black;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0.25em
+}
+
+header, aside, main {
+    padding: 0.25em
+}
+
+.box {
+    background-color: black;
+    border: 5px solid white;
+    padding: 0.5em
+}
+
+header .box {
+    max-width: 100%;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+
+header .box img {
+    width: 100%;
+    margin-top: 5px
+}
+
+#content {
+    display: flex
+}
+
+aside {
+    width: 25%
+}
+
+main {
+    width: 75%
+}
+
+main .box {
+    height: 550px
+}
+
+aside ul {
+    padding: 0;
+    margin: 0
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+a:hover {
+    color: var(--yellow)
+}
+
+aside ul li a:hover::before, a.menu:hover::before {
+    content: url(./soul.png);
+    margin-right: 0.5em;
+    display: inline-block;
+
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+    position: relative;
+    top: 0.125em;
+}
+
+
+h1, h2, h3 {
+    margin-bottom: 0.25em
+}
+
+img {
+    max-width: 100%;
+}
+
+iframe#stuff {
+    width: 95.5%;
+}
+
+blockquote {
+    border-left: 3px solid white;
+    margin: 0;
+    padding-left: 1em;
+}
+
+
+
+
+#dog {
+    position:absolute
+}
