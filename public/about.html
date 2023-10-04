@@ -69,8 +69,16 @@
             background:var(--blurple)
         }
 
+        main {
+            width:70%
+        }
+
+        #rightaside {
+            width:30%
+        }
+
         @media only screen and (max-width:768px) {
-            #rightaside {
+            #rightaside, main {
                 width: 100% !important
             }
         }
@@ -151,7 +159,7 @@
 
             </main>
 
-            <aside id="rightaside" style="width:30%">
+            <aside id="rightaside">
                 <section>
                     <div class="container bg-faded" id="socials">
                         <a href="" class="btn tooltipster" style="grid-column-start:1; grid-column-end:span 2;">
