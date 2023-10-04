@@ -39,6 +39,13 @@ window.onload = function(){ //runs onload
     v4_d.reverse();
 
     var main = document.getElementById("gallery"); 
+    main.style.setProperty('--items', counter); // Set CSS variable --items with the number of items
+    // Calculate the number of rows (rounded up to the next integer)
+    const rowCount = Math.ceil(counter / 4);
+    document.documentElement.style.setProperty('--row-count', rowCount);
+
+
+
     for (let x = 0; x < counter; x++){
 
         var item = document.createElement("div");
@@ -61,5 +68,7 @@ window.onload = function(){ //runs onload
         
 
     }
+
+
 
 }

@@ -5,7 +5,11 @@ log = [
     {
         "img": "https://f2.toyhou.se/file/f2-toyhou-se/images/66888531_hiqVdYGvEJslOGU.png", "date": "jun 26, 2023", "caption": "leila",
         "alt": "a digital drawing of a tv head character. the character is in a floaty pose, with their legs bent, and their arms hanging behind them. they have no visible body, so the form and pose is conveyed through the position of their clothing. the head is purpley-pink, with dials on the right side of the front. there are wings on either side of the tv, and 2 short antennae at the front. the screen displays static, and two closed, almost sad-looking cartoony white eyes over that. they are wearing a dark, short-sleeved collared shirt with a heart-shaped cutout in the chest, and a light pink overall dress with 2 white stripes at the very bottom, and white frills at the hem. they are wearing white, medium-length gloves. they have long-ish socks that are the same dark color as their shirt, with one pink bow behind each. they are wearing light pink, mary-jane-like shoes, with a bow on each. a long cord tail extends out from inside their dress, where a tail would start if they had a visible body. the tail curves upwards and is positioned between their front and back legs. the background is transparent."
-    }
+    },
+    {
+        "img": "https://f2.toyhou.se/file/f2-toyhou-se/images/67458121_VA53rG7yBT33irW.png", "date": "jul 6, 2023", "caption": "<a href='https://www.youtube.com/watch?v=RJWiXvgVzKM'>pure light, pure dread, pure sudafed!</a>",
+        "alt": "a digital drawing. the background is a photo of a bed, with a large window behind it showing a cityscape. a cat furry character is drawn laying on the bed, looking towards the camera. their fur is white, with black hair, black eyes, and glasses. their hair covers one eye. they're wearing a purple hoodie and black shorts."
+    },
 
 
     //TEMPLATE
