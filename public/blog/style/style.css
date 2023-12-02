@@ -236,6 +236,14 @@ hr {
   border-top:var(--lighter) 1px solid!important
 }
 
+ul {
+  padding-left:1em
+}
+
+li {
+  padding-left:0.5em
+}
+
 :-moz-selection {
   background: var(--blurple);
   color: #fff;
