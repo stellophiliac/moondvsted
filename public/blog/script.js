@@ -34,6 +34,7 @@ let postsArray = [
 //[ "posts/2020-11-10-Special-Characters-Example.html", encodeURI( 'Spéci@l "Character\'s" Examp|e' ) ]
 //[ "posts/2020-11-10-My-Third-Post-Example.html" ],
 //[ "posts/2020-11-10-My-Second-Post-Example.html" ],
+["posts/2023-12-03-solipsism.html", encodeURI("i'm a solipsist (and i hate it)")],
 ["posts/2023-12-02-been-a-while.html"],
 ["posts/2022-11-09-lunar-eclipse.html", encodeURI('(space girl,) i saw a lunar eclipse')],
 [ "posts/2022-10-04-on-gender.html"],
@@ -98,18 +99,18 @@ if ( currentIndex > -1 ) {
   if (  postDateFormat.test ( postsArray[currentIndex][0].slice( 6,17 ) ) ) {
     let monthSlice = postsArray[currentIndex][0].slice( 11,13 );
     let month = "";
-    if ( monthSlice === "01") { month = "Jan";}
-    else if ( monthSlice === "02") { month = "Feb";}
-    else if ( monthSlice === "03") { month = "Mar";}
-    else if ( monthSlice === "04") { month = "Apr";}
-    else if ( monthSlice === "05") { month = "May";}
-    else if ( monthSlice === "06") { month = "Jun";}
-    else if ( monthSlice === "07") { month = "Jul";}
-    else if ( monthSlice === "08") { month = "Aug";}
-    else if ( monthSlice === "09") { month = "Sep";}
-    else if ( monthSlice === "10") { month = "Oct";}
-    else if ( monthSlice === "11") { month = "Nov";}
-    else if ( monthSlice === "12") { month = "Dec";}
+    if ( monthSlice === "01") { month = "jan";}
+    else if ( monthSlice === "02") { month = "feb";}
+    else if ( monthSlice === "03") { month = "mar";}
+    else if ( monthSlice === "04") { month = "apr";}
+    else if ( monthSlice === "05") { month = "may";}
+    else if ( monthSlice === "06") { month = "jun";}
+    else if ( monthSlice === "07") { month = "jul";}
+    else if ( monthSlice === "08") { month = "aug";}
+    else if ( monthSlice === "09") { month = "sep";}
+    else if ( monthSlice === "10") { month = "oct";}
+    else if ( monthSlice === "11") { month = "nov";}
+    else if ( monthSlice === "12") { month = "dec";}
 	niceDate = postsArray[currentIndex][0].slice( 14,16 ) + " " + month + ", " + postsArray[currentIndex][0].slice( 6,10 );
   }
 }
