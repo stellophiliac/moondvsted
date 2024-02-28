@@ -37,7 +37,7 @@
 /* formatting */
 
 body {
-    background-image: url(/assets/images/bg.png);
+    background-image: url(/assets/bg.png);
     color: var(--text);
     background-color: var(--bg);
     line-height: 1.6em;
