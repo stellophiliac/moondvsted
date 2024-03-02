@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,600&family=Jetbrains+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 :root {
 
@@ -111,6 +111,7 @@ a {
 a:not(#header li a) {
   background: var(--gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -134,6 +135,7 @@ a::before {
 #header li a::before {
   background: none;
   -webkit-transition: none;
+  transition:none
 }
 
 a:hover {

@@ -190,6 +190,7 @@ a {
     overflow: hidden;
     background: var(--gradient-h);
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
 
 }
@@ -327,6 +328,7 @@ a.btn:hover {
 a.btn span {
     background: var(--gradient-h);
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     transition-duration: 0.5s;
 }
