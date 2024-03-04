@@ -276,3 +276,7 @@ li {
 h4#postdate, #recentpostlistdiv h2, #header li a, #nextprev, h4#postDate{
   text-transform:lowercase!important
 }
+
+h3 {
+  margin-top:2em
+}
