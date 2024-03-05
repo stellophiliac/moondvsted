@@ -66,6 +66,10 @@ header img {
     display: block
 }
 
+header#head.no-img img {
+    display:none
+}
+
 #content {
     display: flex
 }
@@ -131,12 +135,20 @@ h3 {
     font-family: 'Jetbrains Mono', monospace
 }
 
+main h1 {
+    font-size:1.75em
+}
+
 h1:first-child, h2:first-child {
     margin-top: 0
 }
 
 p:last-child {
     margin-bottom: 0
+}
+
+br.clear {
+    clear:both;
 }
 
 .h-100 {
@@ -149,6 +161,10 @@ p:last-child {
 
 .text-right {
     text-align: right
+}
+
+.text-nested {
+    margin-left:1em
 }
 
 .scroll {
@@ -346,6 +362,14 @@ a.btn:hover span {
 
 .d-block {
     display: block
+}
+
+.d-inline {
+    display:inline
+}
+
+.d-inline-block {
+    display:inline-block
 }
 
 /* MOBILE */
