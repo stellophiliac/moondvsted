@@ -34,12 +34,11 @@ let postsArray = [
 //[ "posts/2020-11-10-Special-Characters-Example.html", encodeURI( 'Spéci@l "Character\'s" Examp|e' ) ]
 //[ "posts/2020-11-10-My-Third-Post-Example.html" ],
 //[ "posts/2020-11-10-My-Second-Post-Example.html" ],
-["posts/2024-01-26-2024-new-years.html", encodeURI("happy new years (and some movie reviews)")],
 ["posts/2023-12-03-solipsism.html", encodeURI("i'm a solipsist (and i hate it)")],
 ["posts/2023-12-02-been-a-while.html"],
 ["posts/2022-11-09-lunar-eclipse.html", encodeURI('(space girl,) i saw a lunar eclipse')],
-[ "posts/2022-10-04-on-gender.html"],
-["posts/2022-10-01-first-post.html" ] ];
+["posts/2022-10-04-on-gender.html"],
+["posts/2022-10-01-first-post.html"]];
 
 //-----------------------------
 
@@ -78,7 +77,7 @@ for (i = 0; i < postsArray.length; i++) {
 //Or pass along the "special characters" version of the title if one exists
 function formatPostTitle(i) {
   // Check if there is an alternate post title
-  if ( postsArray[i].length > 1 ) {
+  if ( postsArray[i].length > 1) {
     //Remember how we had to use encodeURI for special characters up above? Now we use decodeURI to get them back.
     return decodeURI(postsArray[i][1]);
   } else { 
