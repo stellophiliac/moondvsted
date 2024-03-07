@@ -67,7 +67,7 @@ header img {
 }
 
 header#head.no-img img {
-    display:none
+    display: none
 }
 
 #content {
@@ -131,16 +131,21 @@ ul#navLinks li:before {
 
 h1,
 h2,
-h3 {
+h3,h4,h5,h6 {
     font-family: 'Jetbrains Mono', monospace
 }
 
 main h1 {
-    font-size:1.75em
+    font-size: 1.75em
 }
 
-h1:first-child, h2:first-child {
+h1:first-child,
+h2:first-child {
     margin-top: 0
+}
+
+h1:last-child {
+    margin-bottom:0
 }
 
 p:last-child {
@@ -148,7 +153,7 @@ p:last-child {
 }
 
 br.clear {
-    clear:both;
+    clear: both;
 }
 
 .h-100 {
@@ -164,7 +169,7 @@ br.clear {
 }
 
 .text-nested {
-    margin-left:1em
+    margin-left: 1em
 }
 
 .scroll {
@@ -206,7 +211,7 @@ a {
     overflow: hidden;
     background: var(--gradient-h);
     -webkit-background-clip: text;
-    background-clip:text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 
 }
@@ -242,7 +247,31 @@ a:active:before {
     right: 0;
 }
 
+a.no-line::before {
+    display: none
+}
+
 /* links end */
+
+/*lists*/
+
+ul {
+    padding-left: 1.25em;
+    list-style-type: '* ';
+}
+
+li::marker {
+    font-family: 'jetbrains mono';
+    color:var(--pinkple);
+    font-weight:bold
+
+}
+
+ul:last-child {
+    margin-bottom: 0
+}
+
+/*lists end*/
 
 /* selection */
 ::-moz-selection {
@@ -344,7 +373,7 @@ a.btn:hover {
 a.btn span {
     background: var(--gradient-h);
     -webkit-background-clip: text;
-    background-clip:text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition-duration: 0.5s;
 }
@@ -365,15 +394,26 @@ a.btn:hover span {
 }
 
 .d-inline {
-    display:inline
+    display: inline
 }
 
 .d-inline-block {
-    display:inline-block
+    display: inline-block
+}
+
+/*cols*/
+
+.flex-1 {
+    flex: 1
 }
 
 /* MOBILE */
 
+@media only screen and (max-width: 992px) {
+    .col-lg {
+        width: 100%
+    }
+}
 
 @media only screen and (max-width: 768px) {
 
@@ -428,7 +468,7 @@ a.btn:hover span {
         display: none
     }
 
-    .col-lg {
+    .col-md {
         width: 100% !important;
         display: block
     }
