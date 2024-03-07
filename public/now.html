@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>fly me to the moon!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="favicon.ico" type="image/png">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<script>
+    //cred to septic.lol
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var user = document.getElementById("listen").getAttribute("user");
+        var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" + user + "&api_key=afc213709a996ae561e307f596c9952b&format=json";
+        var request = new XMLHttpRequest();
+        request.open('GET', url, true);
+
+        request.onload = function () {
+            if (request.status >= 200 && request.status < 400) {
+
+                var data = JSON.parse(request.responseText);
+                var artist = data.recenttracks.track[0].artist["#text"];
+                var song = data.recenttracks.track[0]["name"];
+                var artwork = data.recenttracks.track[0].image[1]["#text"];
+                var songLink = data.recenttracks.track[0]["url"];
+
+                var trackInfo = document.getElementById("track");
+                trackInfo.innerHTML =
+                    "<a id='songname'>" + song + "</a> - " + artist ;
+
+                var songName = document.getElementById("songname");
+                songName.setAttribute("href", songLink);
+                songName.setAttribute("target", "_blank");
+
+
+            } else {
+                console.error("Error fetching data from server.");
+            }
+        };
+
+        request.onerror = function () {
+            console.error("Connection error.");
+        };
+
+        request.send();
+    });
+
+</script>
+
+<body>
+    <div id="wrapper">
+        <header id="head">
+        </header>
+        <div id="content">
+            <aside id="left">
+            </aside>
+            <main>
+                <section>
+                    <div class="container bg-faded">
+                        <h1>
+                            now
+                        </h1>
+                        <p>what i'm up to! <a href="https://nownownow.com/about" target="_blank">about now pages</a><br>
+                            layout is inspired by <a href="https://sneekrealm.neocities.org/now/" target="_blank">sneekrealm's now
+                                page</a><br>
+                            last updated: march 07, 2024</p>
+                    </div>
+                </section>
+                <div class="d-flex">
+                    <section class="col-md" style="width:50%">
+                        <div class="container bg-faded h-100">
+                            <h2>days</h2>
+                            <ul>
+                                <li>trying to figure out how to track my shows (i am indecisive)</li>
+                                <li>coding oneshot fanlisting pages</li>
+                                <li>browsing the fediverse</li>
+                                <li>thinking about watching murder drones...</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="col-md" style="width:50%">
+                        <div class="container bg-faded h-100">
+                            <h2>weeks</h2>
+                            <ul>
+                                <li>playing dnd</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="col-md" style="width:50%">
+                        <div class="container bg-faded h-100">
+                            <h2>months</h2>
+                            <ul>
+                                <li>planning (and hopefully making) a game</li>
+                                <li>learning javascript</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="col-md" style="width:50%">
+                        <div class="container bg-faded h-100">
+                            <h2>years</h2>
+                            <ul>
+                                <li>learning toki pona</li>
+                                <li>gonna learn tagalog</li>
+                                <li>university in the near future...</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <aside style="width:20%">
+                <section>
+                    <div class="container bg-faded">
+
+                        <h1 class="text-center">media</h1>
+                        <p>
+                        <div class="d-flex">
+                            <b class="text-mono" style="flex-grow:1">reading</b> <a href="/reading/"
+                                style="margin-left:0.5em"><i class="ph-duotone ph-books"></i></a><br>
+                        </div>
+                        <cite>the left hand of darkness</cite> (for bookbug)<br>
+                        <cite>i want to die but i want to eat tteokbokki</cite>
+                        </p>
+                        <p>
+                        <div class="d-flex">
+                            <b class="text-mono" style="flex-grow:1">listening to</b>
+                            <a href="https://www.last.fm/user/lunedvst" style="margin-left:0.5em" target="_blank">
+                                <i class="ph-duotone ph-radio"></i>
+                            </a>
+                        </div>
+                        <div id="listen" user="lunedvst">
+                            <div id="track"></div>
+                        </div>
+                        </p>
+
+                    </div>
+                </section>
+            </aside>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+
+<script src=" /load.js"></script>
+
+</html>
