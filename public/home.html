@@ -48,6 +48,23 @@
                         <script src="https://status.cafe/current-status.js?name=stel" defer></script>
                     </div>
                 </section>
+
+                <section>
+                    <div class="container bg-faded h-100">
+                        <style>
+                            #recentpostlistdiv ul {
+                                list-style-type: none;
+                                padding: 0
+                            }
+
+                            #recentpostlistdiv h2 {
+                                text-align: center;
+                            }
+                        </style>
+                        <div id="recentpostlistdiv"></div>
+                    </div>
+                </section>
+
                 <section>
                     <div class="container bg-faded">
                         <h2 class="text-right">updates</h2>
@@ -93,8 +110,8 @@
                             }
 
                             a#artworklink {
-                                flex-wrap:nowrap!important;
-                                font-family:'Jetbrains Mono', monospace
+                                flex-wrap: nowrap !important;
+                                font-family: 'Jetbrains Mono', monospace
                             }
 
                             #artist {
@@ -104,7 +121,7 @@
 
                             #track {
                                 white-space: nowrap;
-                                text-overflow:ellipsis;
+                                text-overflow: ellipsis;
 
                             }
 
@@ -130,21 +147,24 @@
                             */
 
                             .blinker {
-                                margin-right:0.75em;
-                                background-color:#5bd38d;
-                                height:10px;
-                                width:10px;
+                                margin-right: 0.75em;
+                                background-color: #5bd38d;
+                                height: 10px;
+                                width: 10px;
                                 border-radius: 50%;
-                                display:inline-block;
-                                animation:blink 2s ease-in-out infinite
+                                display: inline-block;
+                                animation: blink 2s ease-in-out infinite
                             }
 
                             @keyframes blink {
-                                0%, 100% {
-                                    opacity:75%
+
+                                0%,
+                                100% {
+                                    opacity: 75%
                                 }
+
                                 50% {
-                                    opacity:25%
+                                    opacity: 25%
                                 }
                             }
                         </style>
@@ -189,5 +209,6 @@
 </body>
 
 <script src=" /load.js"></script>
+<script src="/blog/script.js"></script>
 
 </html>
