@@ -11,6 +11,7 @@
     --bg: #1c1624;
     --faded: #38323f;
     --lighter: #433d4b;
+    --border: #67616f;
     --text: #e0e0e0;
 
     --pinkple: #e6cbd6;
@@ -94,7 +95,8 @@ section {
 footer {
     font-size: 0.75em;
     font-family: 'Jetbrains Mono', monospace;
-    text-align: center
+    text-align: center;
+    margin-top:0.5em
 }
 
 footer::after {
@@ -416,7 +418,7 @@ a.btn:hover span {
 
 @media only screen and (max-width: 992px) {
     .col-lg {
-        width: 100%
+        width: 100%!important
     }
 }
 

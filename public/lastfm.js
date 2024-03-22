@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
           var listenInfo = document.getElementById("listen");
           listenInfo.innerHTML = '<h1 class="text-center">last played:</h1>';
-          console.log("false");
         }
 
         

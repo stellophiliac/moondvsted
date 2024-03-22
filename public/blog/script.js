@@ -5,10 +5,10 @@
   add your own scripts to do whatever you like!*/
 
 //TABLE OF CONTENTS
-  // 1. Basic Info
-  // 2. Posts Array
-  // 3. Creating HTML Sections to Be Inserted (Header, Footer, etc)
-  // 4. Inserting the Sections Into our Actual HTML Pages
+// 1. Basic Info
+// 2. Posts Array
+// 3. Creating HTML Sections to Be Inserted (Header, Footer, etc)
+// 4. Inserting the Sections Into our Actual HTML Pages
 
 //-----------------------------
 
@@ -31,15 +31,15 @@ let authorLink = "https://moondvsted.neocities.org/home.html"; // Enter your web
   use a date it must still follow that format.*/
 
 let postsArray = [
-//[ "posts/2020-11-10-Special-Characters-Example.html", encodeURI( 'Spéci@l "Character\'s" Examp|e' ) ]
-//[ "posts/2020-11-10-My-Third-Post-Example.html" ],
-//[ "posts/2020-11-10-My-Second-Post-Example.html" ],
-["posts/2024-01-26-2024-new-years.html", encodeURI("happy new year's (and some movie reviews)")],
-["posts/2023-12-03-solipsism.html", encodeURI("i'm a solipsist (and i hate it)")],
-["posts/2023-12-02-been-a-while.html"],
-["posts/2022-11-09-lunar-eclipse.html", encodeURI('(space girl,) i saw a lunar eclipse')],
-["posts/2022-10-04-on-gender.html"],
-["posts/2022-10-01-first-post.html"]];
+    //[ "posts/2020-11-10-Special-Characters-Example.html", encodeURI( 'Spéci@l "Character\'s" Examp|e' ) ]
+    //[ "posts/2020-11-10-My-Third-Post-Example.html" ],
+    //[ "posts/2020-11-10-My-Second-Post-Example.html" ],
+    ["posts/2024-01-26-2024-new-years.html", encodeURI("happy new year's (and some movie reviews)")],
+    ["posts/2023-12-03-solipsism.html", encodeURI("i'm a solipsist (and i hate it)")],
+    ["posts/2023-12-02-been-a-while.html"],
+    ["posts/2022-11-09-lunar-eclipse.html", encodeURI('(space girl,) i saw a lunar eclipse')],
+    ["posts/2022-10-04-on-gender.html"],
+    ["posts/2022-10-01-first-post.html"]];
 
 //-----------------------------
 
@@ -52,110 +52,102 @@ const postDateFormat = /\d{4}\-\d{2}\-\d{2}\-/;
 
 //Check if you are in posts (if so, the links will have to go up a directory)
 let relativePath = ".";
-if ( url.includes("posts/") ) {
-  relativePath = "..";
+if (url.includes("posts/")) {
+    relativePath = "..";
 }
-
-//Write the Header HTML, a series of list items containing links.
-let headerHTML = '<ul> <li><a href="../../home.html"><- home</a></li>' + 
-'<li><a href="' + relativePath + '/index.html">blog</a></li>' +
-'<li><a href="' + relativePath + '/archive.html">archive</a></li> </ul>';
-
-//Write the Footer HTML, which has information about the blog.
-let footerHTML = "<hr><p>" + blogName + " is written by <a href='" + authorLink + "'>" + authorName + "</a>, built with <a href='https://zonelets.net/'>Zonelets</a>, and hosted by <a href='https://neocities.org/'>Neocities!</a></p>";
 
 //To do the following stuff, we want to know where we are in the posts array (if we're currently on a post page).
 let currentIndex = -1;
 let currentFilename = url.substring(url.lastIndexOf('posts/'));
 let i;
 for (i = 0; i < postsArray.length; i++) {
-  if ( postsArray[i][0] === currentFilename ) {
-    currentIndex = i;
-  }
+    if (postsArray[i][0] === currentFilename) {
+        currentIndex = i;
+    }
 }
 
 //Convert the post url to readable post name. E.g. changes "2020-10-10-My-First-Post.html" to "My First Post"
 //Or pass along the "special characters" version of the title if one exists
 function formatPostTitle(i) {
-  // Check if there is an alternate post title
-  if ( postsArray[i].length > 1) {
-    //Remember how we had to use encodeURI for special characters up above? Now we use decodeURI to get them back.
-    return decodeURI(postsArray[i][1]);
-  } else { 
-  //If there is no alternate post title, check if the post uses the date format or not, and return the proper title
-	if (  postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
-	  return postsArray[i][0].slice(17,-5).replace(/-/g," ");
+    // Check if there is an alternate post title
+    if (postsArray[i].length > 1) {
+        //Remember how we had to use encodeURI for special characters up above? Now we use decodeURI to get them back.
+        return decodeURI(postsArray[i][1]);
     } else {
-      return postsArray[i][0].slice(6,-5).replace(/-/g," ");
+        //If there is no alternate post title, check if the post uses the date format or not, and return the proper title
+        if (postDateFormat.test(postsArray[i][0].slice(6, 17))) {
+            return postsArray[i][0].slice(17, -5).replace(/-/g, " ");
+        } else {
+            return postsArray[i][0].slice(6, -5).replace(/-/g, " ");
+        }
     }
-  }
 }
 
 //Get the current post title and date (if we are on a post page)
 let currentPostTitle = "";
 let niceDate = "";
-if ( currentIndex > -1 ) {
-  currentPostTitle = formatPostTitle( currentIndex );
-  //Generate the "nice to read" version of date
-  if (  postDateFormat.test ( postsArray[currentIndex][0].slice( 6,17 ) ) ) {
-    let monthSlice = postsArray[currentIndex][0].slice( 11,13 );
-    let month = "";
-    if ( monthSlice === "01") { month = "jan";}
-    else if ( monthSlice === "02") { month = "feb";}
-    else if ( monthSlice === "03") { month = "mar";}
-    else if ( monthSlice === "04") { month = "apr";}
-    else if ( monthSlice === "05") { month = "may";}
-    else if ( monthSlice === "06") { month = "jun";}
-    else if ( monthSlice === "07") { month = "jul";}
-    else if ( monthSlice === "08") { month = "aug";}
-    else if ( monthSlice === "09") { month = "sep";}
-    else if ( monthSlice === "10") { month = "oct";}
-    else if ( monthSlice === "11") { month = "nov";}
-    else if ( monthSlice === "12") { month = "dec";}
-	niceDate = postsArray[currentIndex][0].slice( 14,16 ) + " " + month + ", " + postsArray[currentIndex][0].slice( 6,10 );
-  }
+if (currentIndex > -1) {
+    currentPostTitle = formatPostTitle(currentIndex);
+    //Generate the "nice to read" version of date
+    if (postDateFormat.test(postsArray[currentIndex][0].slice(6, 17))) {
+        let monthSlice = postsArray[currentIndex][0].slice(11, 13);
+        let month = "";
+        if (monthSlice === "01") { month = "jan"; }
+        else if (monthSlice === "02") { month = "feb"; }
+        else if (monthSlice === "03") { month = "mar"; }
+        else if (monthSlice === "04") { month = "apr"; }
+        else if (monthSlice === "05") { month = "may"; }
+        else if (monthSlice === "06") { month = "jun"; }
+        else if (monthSlice === "07") { month = "jul"; }
+        else if (monthSlice === "08") { month = "aug"; }
+        else if (monthSlice === "09") { month = "sep"; }
+        else if (monthSlice === "10") { month = "oct"; }
+        else if (monthSlice === "11") { month = "nov"; }
+        else if (monthSlice === "12") { month = "dec"; }
+        niceDate = postsArray[currentIndex][0].slice(14, 16) + " " + month + ", " + postsArray[currentIndex][0].slice(6, 10);
+    }
 }
 
 //Generate the Post List HTML, which will be shown on the "Archive" page.
 
 function formatPostLink(i) {
-  let postTitle_i = "";
-  if ( postsArray[i].length > 1 ) {
-    postTitle_i = decodeURI(postsArray[i][1]);
-  } else {
-	if (  postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
-	  postTitle_i = postsArray[i][0].slice(17,-5).replace(/-/g," ");
+    let postTitle_i = "";
+    if (postsArray[i].length > 1) {
+        postTitle_i = decodeURI(postsArray[i][1]);
     } else {
-      postTitle_i = postsArray[i][0].slice(6,-5).replace(/-/g," ");
+        if (postDateFormat.test(postsArray[i][0].slice(6, 17))) {
+            postTitle_i = postsArray[i][0].slice(17, -5).replace(/-/g, " ");
+        } else {
+            postTitle_i = postsArray[i][0].slice(6, -5).replace(/-/g, " ");
+        }
     }
-  }
-  if (  postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
-    return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postsArray[i][0].slice(6,16) + " \u00BB " + postTitle_i + '</a></li>';
-  } else {
-    return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postTitle_i + '</a></li>';
-  }
+    if (postDateFormat.test(postsArray[i][0].slice(6, 17))) {
+        return '<li><a href="' + relativePath + '/' + postsArray[i][0] + '">' + postsArray[i][0].slice(6, 16) + " \u00BB " + postTitle_i + '</a></li>';
+    } else {
+        return '<li><a href="' + relativePath + '/' + postsArray[i][0] + '">' + postTitle_i + '</a></li>';
+    }
 }
 
 let postListHTML = "<ul>";
-for ( let i = 0; i < postsArray.length; i++ ) {
-  postListHTML += formatPostLink(i);
+for (let i = 0; i < postsArray.length; i++) {
+    postListHTML += formatPostLink(i);
 }
 postListHTML += "</ul>";
 
 //Generate the Recent Post List HTML, which can be shown on the home page (or wherever you want!)
 let recentPostsCutoff = 3; //Hey YOU! Change this number to set how many recent posts to show before cutting it off with a "more posts" link.
-let recentPostListHTML = "<h2>Recent Posts:</h2><ul>";
-let numberOfRecentPosts = Math.min( recentPostsCutoff, postsArray.length );
-for ( let i = 0; i < numberOfRecentPosts; i++ ) {
-  recentPostListHTML += formatPostLink(i);
+let recentPostListHTML = "<h2>recent posts</h2><ul>";
+let numberOfRecentPosts = Math.min(recentPostsCutoff, postsArray.length);
+for (let i = 0; i < numberOfRecentPosts; i++) {
+    recentPostListHTML += formatPostLink(i);
 }
 /*If you've written more posts than can fit in the Recent Posts List,
   then we'll add a link to the archive so readers can find the rest of
   your wonderful posts and be filled with knowledge.*/
-if ( postsArray.length > recentPostsCutoff ) {
-  recentPostListHTML += '<li class="moreposts"><a href=' + relativePath + '/archive.html>\u00BB more posts</a></li></ul>';
+if (postsArray.length > recentPostsCutoff) {
+    recentPostListHTML += '<li class="moreposts"><a href=' + relativePath + '/archive.html>\u00BB more posts</a></li></ul>';
 } else {
-  recentPostListHTML += "</ul>";
+    recentPostListHTML += "</ul>";
 }
 
 //Generate the Next and Previous Post Links HTML
@@ -166,18 +158,18 @@ let prevlink = "";
 /*If you're on the newest blog post, there's no point to
  a "Next Post" link, right? And vice versa with the oldest 
  post! That's what the following code handles.*/
-if ( postsArray.length < 2 ) {
-  nextprevHTML = '<a href="' + relativePath + '/index.html">Index</a>';
-} else if ( currentIndex === 0 ) {
-  prevlink = postsArray[currentIndex + 1][0];
-  nextprevHTML = '<a href="' + relativePath + '/index.html">Index</a> | <a href="'+ relativePath + '/' + prevlink +'">Previous Post \u00BB</a>';
-} else if ( currentIndex === postsArray.length - 1 ) {
-  nextlink = postsArray[currentIndex - 1][0];
-  nextprevHTML = '<a href="' + relativePath + '/' + nextlink +'">\u00AB Next Post</a> | <a href="' + relativePath + '/index.html">Index</a>';
-} else if ( 0 < currentIndex && currentIndex < postsArray.length - 1 ) {
-  nextlink = postsArray[currentIndex - 1][0];
-  prevlink = postsArray[currentIndex + 1][0];
-  nextprevHTML = '<a href="' + relativePath + '/'+ nextlink +'">\u00AB Next Post</a> | <a href="' + relativePath + '/index.html">Index</a> | <a href="' + relativePath + '/'+ prevlink +'">Previous Post \u00BB</a>';
+if (postsArray.length < 2) {
+    nextprevHTML = '<a href="' + relativePath + '/index.html">Index</a>';
+} else if (currentIndex === 0) {
+    prevlink = postsArray[currentIndex + 1][0];
+    nextprevHTML = '<a href="' + relativePath + '/index.html">Index</a> | <a href="' + relativePath + '/' + prevlink + '">Previous Post \u00BB</a>';
+} else if (currentIndex === postsArray.length - 1) {
+    nextlink = postsArray[currentIndex - 1][0];
+    nextprevHTML = '<a href="' + relativePath + '/' + nextlink + '">\u00AB Next Post</a> | <a href="' + relativePath + '/index.html">Index</a>';
+} else if (0 < currentIndex && currentIndex < postsArray.length - 1) {
+    nextlink = postsArray[currentIndex - 1][0];
+    prevlink = postsArray[currentIndex + 1][0];
+    nextprevHTML = '<a href="' + relativePath + '/' + nextlink + '">\u00AB Next Post</a> | <a href="' + relativePath + '/index.html">Index</a> | <a href="' + relativePath + '/' + prevlink + '">Previous Post \u00BB</a>';
 }
 
 //-----------------------------
@@ -189,33 +181,46 @@ if ( postsArray.length < 2 ) {
   one particular blog post where we don't want the footer to appear, 
   we simply don't put a <div id="footer"> on that page.*/
 
-if (document.getElementById("nextprev")) {
-  document.getElementById("nextprev").innerHTML = nextprevHTML;
+if (url.includes("blog/")) {
+    //Write the Header HTML, a series of list items containing links.
+    let headerHTML = '<ul> <li><a href="../../home.html"><- home</a></li>' +
+        '<li><a href="' + relativePath + '/index.html">blog</a></li>' +
+        '<li><a href="' + relativePath + '/archive.html">archive</a></li> </ul>';
+
+    //Write the Footer HTML, which has information about the blog.
+    let footerHTML = "<hr><p>" + blogName + " is written by <a href='" + authorLink + "'>" + authorName + "</a>, built with <a href='https://zonelets.net/'>Zonelets</a>, and hosted by <a href='https://neocities.org/'>Neocities!</a></p>";
+
+    if (document.getElementById("nextprev")) {
+        document.getElementById("nextprev").innerHTML = nextprevHTML;
+    }
+    if (document.getElementById("postlistdiv")) {
+        document.getElementById("postlistdiv").innerHTML = postListHTML;
+    }
+
+
+    if (document.getElementById("header")) {
+        document.getElementById("header").innerHTML = headerHTML;
+    }
+    if (document.getElementById("blogTitleH1")) {
+        document.getElementById("blogTitleH1").innerHTML = blogTitle;
+    }
+    if (document.getElementById("postTitleH1")) {
+        document.getElementById("postTitleH1").innerHTML = currentPostTitle;
+    }
+    if (document.getElementById("postDate")) {
+        document.getElementById("postDate").innerHTML = niceDate;
+    }
+    if (document.getElementById("footer")) {
+        document.getElementById("footer").innerHTML = footerHTML;
+    }
 }
-if (document.getElementById("postlistdiv")) {
-  document.getElementById("postlistdiv").innerHTML = postListHTML;
-}
+
 if (document.getElementById("recentpostlistdiv")) {
-  document.getElementById("recentpostlistdiv").innerHTML = recentPostListHTML;
-}
-if (document.getElementById("header")) {
-  document.getElementById("header").innerHTML = headerHTML;
-}
-if (document.getElementById("blogTitleH1")) {
-  document.getElementById("blogTitleH1").innerHTML = blogTitle;
-}
-if (document.getElementById("postTitleH1")) {
-  document.getElementById("postTitleH1").innerHTML = currentPostTitle;
-}
-if (document.getElementById("postDate")) {
-  document.getElementById("postDate").innerHTML = niceDate;
-}
-if (document.getElementById("footer")) {
-  document.getElementById("footer").innerHTML = footerHTML;
+    document.getElementById("recentpostlistdiv").innerHTML = recentPostListHTML;
 }
 
 //Dynamically set the HTML <title> tag from the postTitle variable we created earlier
 //The <title> tag content is what shows up on browser tabs
 if (document.title === "Blog Post") {
-  document.title = currentPostTitle;
+    document.title = currentPostTitle;
 }
