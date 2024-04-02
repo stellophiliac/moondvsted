@@ -11,6 +11,16 @@ members = [
         country: "United States",
         email: "chelan@gooberweb.xyz",
         favchar: "Silver"
+    },
+    {
+        name: "Ciel",
+        country: "United States",
+        favchar: "Lamplighter, Silver, Niko"
+    },
+    { 
+        name: "Lindsay",
+        country: "United States",
+        favchar: "Everyone"
     }
     
 ]
