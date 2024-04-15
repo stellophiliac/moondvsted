@@ -21,6 +21,12 @@ members = [
         name: "Lindsay",
         country: "United States",
         favchar: "Everyone"
+    },
+    {
+        name:"Maggie",
+        country: "United States",
+        favchar:"Niko",
+        site:"https://magneticdogz.neocities.org"
     }
     
 ]
