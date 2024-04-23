@@ -54,6 +54,8 @@ const postDateFormat = /\d{4}\-\d{2}\-\d{2}\-/;
 let relativePath = ".";
 if (url.includes("posts/")) {
     relativePath = "..";
+} else if (!url.includes("blog/")) {
+    relativePath = "/blog"
 }
 
 //To do the following stuff, we want to know where we are in the posts array (if we're currently on a post page).
