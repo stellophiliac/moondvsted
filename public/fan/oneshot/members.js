@@ -27,6 +27,13 @@ members = [
         country: "United States",
         favchar:"Niko",
         site:"https://magneticdogz.neocities.org"
+    },
+    {
+        name:"Flonne",
+        country: "United States",
+        email: "flonnepocket@gmail.com",
+        site: "https://vivarism.net/",
+        favchar: "Niko, The Player"
     }
     
 ]
