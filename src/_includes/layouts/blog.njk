@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>astronotes</title>
+    <!-- This specifies the favicon (little icon on the browser tab) -->
+    <!-- https://www.deviantart.com/fabledferns/art/F2U-Saturn-pixel-634664732 -->
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+    <!-- This helps our site look consistent across devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!-- Here's the link to our CSS stylesheet! -->
+    <link href="/assets/style/blog.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+    <main>
+        <header>
+            <ul>
+                <li>
+                    <a href="/home/"><- home</a>
+                </li>
+                <li>
+                    <a href="/blog/">blog</a>
+                </li>
+            </ul>
+        </header>
+        <div id="content">
+
+
+            {{content | safe}}
+
+        </div> <!-- end of div id="content" -->
+        <footer>
+            <hr>
+            <p>thoughts? comments? feel free to reach out!</p>
+        </footer>
+    </main> <!-- end of div id="container" -->
+    <!-- Here's the link to our JavaScript! -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
