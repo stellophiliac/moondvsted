@@ -5,4 +5,7 @@ node_modules
 # build artefacts
 
 public
+src/_includes/.DS_Store
+src/assets/.DS_Store
+src/.DS_Store
 .DS_Store
