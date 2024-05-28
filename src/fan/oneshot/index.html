@@ -1,0 +1,86 @@
+---
+permalink: fan/oneshot/index.html
+---
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>YELLOW PHOSPHOR : Oneshot Fanlisting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="sun.png" type="image/png">
+</head>
+
+<body>
+    <header></header>
+    <div id="wrapper">
+        <nav id="nav"></nav>
+        <main>
+            <p>Welcome to <em>Yellow Phosphor</em>, the TFL-listed fanlisting
+                for <a href="https://store.steampowered.com/app/420530/OneShot/" target="_blank">OneShot</a> by Future Cat!</p>
+            <p>A fanlisting is "an online listing of fans of a subject, such as a TV show, actor, or musician,
+                that is created by an individual and open for fans from around the world to join." (<a
+                    href="http://thefanlistings.org/tfl101.php">TFL</a>)</p>
+            <p>If you're a fan of OneShot, feel free to join!</p>
+            <br>
+            <div
+                style="background-color:rgba(43, 17, 64, 0.75); padding:1em 1.5em; border-left: 3px var(--yellow) solid; display:flex; align-items: center; flex-wrap:wrap">
+
+                <div style="width:40%" class="col"><em>ONLINE SINCE:</em> March 30, 2024<br>
+                    <em>LAST UPDATED:</em> May 16, 2024<br>
+                </div>
+                <div style="width:50%" class="col"><em>MEMBER COUNT:</em> <span id="member-count"></span>, from <span
+                        id="country-count"></span>
+                    countries<br>
+                    <em>LATEST MEMBER:</em> <span id="latest-member"></span><br>
+                </div>
+                <div style="width:10%; text-align: center;" id="splash-img"><img
+                        src="https://static.wikia.nocookie.net/oneshot/images/c/c6/Niko_roomba2.gif"
+                        style="height:75px; margin-top:-5px"></div>
+            </div><br>
+            <div style="display:flex; align-items: end;">
+                <img src="https://static.wikia.nocookie.net/oneshot/images/4/46/Red_lamplighter_working.gif" style="height:120px;-webkit-transform: scaleX(-1);
+                    transform: scaleX(-1); margin-right:0.5em">
+                <p><small>Listed on <a href="http://thefanlistings.org/" target="_blank">thefanlistings.org</a> under
+                        the <em>Games</em> category. Owned and maintained by <a href="/home.html">Stel</a>!<br>This fanlisting is in no way
+                        associated with OneShot or the team behind it – just run by a
+                        fan!</small></p>
+            </div>
+        </main>
+    </div>
+</body>
+
+<script src="load.js"></script>
+<script src="members.js"></script>
+<script>
+    document.getElementById('member-count').innerHTML = members.length
+
+    var latestMember = members[members.length - 1]
+
+    function countCountries(data) {
+
+        const countryCount = new Set();
+
+        // Iterate through the array of objects
+        data.forEach(item => {
+            countryCount.add(item.country);
+        });
+
+        // Log the count of unique countries
+        document.getElementById('country-count').innerHTML = countryCount.size
+
+    }
+
+    countCountries(members)
+
+    if (latestMember.site) {
+        document.getElementById('latest-member').innerHTML = '<a href="' + latestMember.site + '">' + latestMember.name + '</a>'
+    } else {
+        document.getElementById('latest-member').innerHTML = latestMember.name
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,123 @@
+<main>
+    <section>
+        <div class="container bg-faded">
+            <h1>music</h1>
+            <p>various melodic sounds i make<br>music player is 8sumint's <a
+                    href="https://github.com/8sumint/supermeowplayer" target="_blank">supermeowplayer</a>.
+            </p>
+            <p>most of my music is made with <a href="https://lmms.io/" target="_blank">lmms</a><br>betcha
+                can't guess what my favorite instrument is</p>
+        </div>
+    </section>
+    <section>
+        <div class="container bg-faded">
+            <h2>random</h2>
+            <h3>"finished" pieces</h3>
+            <p>actual "finished" stuff</p>
+            <ul>
+                <li>
+                    <p>moonrise<br>
+                        <small>may 2022, with a bit of reworking after</small>
+                    </p>
+                    <p>one of my favorites</p>
+                    <meowplayer canpause>
+                        <audio src="https://files.catbox.moe/lmpr20.mp3" controls></audio>
+                    </meowplayer>
+                </li>
+                <li>
+                    <p>traffic lights<br>
+                        <small>november-ish 2021</small>
+                    </p>
+                    <p>the abrupt end is intentional</p>
+                    <meowplayer canpause>
+                        <audio src="https://files.catbox.moe/ptjgqd.mp3" controls></audio>
+                    </meowplayer>
+                </li>
+            </ul>
+            <h3>"mini songs"</h3>
+            <p>mostly just me fucking around, generally &lt;1 minute</p>
+            <ul>
+                <li>
+                    <p>untitled ("weird piano")<br>
+                        <small>february 16, 2024</small>
+                    </p>
+                    <p>was going for the vibe of somebody fucking around on the piano with no particular
+                        direction</p>
+                    <meowplayer canpause="1">
+                        <audio src="https://files.catbox.moe/2bxwqv.mp3" controls></audio>
+                    </meowplayer>
+                </li>
+                <li>
+                    <p>untitled ("piano")<br>
+                        <small>february 16, 2024</small>
+                    </p>
+                    <p>fucking around with too many layered melodies, like i used to do on chrome music lab
+                    </p>
+                    <meowplayer canpause>
+                        <audio src="https://files.catbox.moe/8josdu.mp3" controls></audio>
+                    </meowplayer>
+                </li>
+                <li>
+                    <p>boincy<br><small>february 2023</small></p>
+                    <meowplayer canpause>
+                        <audio src="https://files.catbox.moe/v9k5mn.mp3" controls></audio>
+                    </meowplayer>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="container bg-faded">
+            <h2>chrome music lab</h2>
+            <ul>
+                <li><a href="https://musiclab.chromeexperiments.com/Song-Maker/song/6259269225152512"
+                        target="_blank">mar 03, 2022</a></li>
+                <li><a href="https://musiclab.chromeexperiments.com/Song-Maker/song/5674641690984448"
+                        target="_blank">jan 14, 2022</a></li>
+                <li><a href="https://musiclab.chromeexperiments.com/Song-Maker/song/5647560959590400"
+                        target="_blank">nov 18, 2021 (2)</a></li>
+                <li><a href="https://musiclab.chromeexperiments.com/Song-Maker/song/5507770956120064"
+                        target="_blank">nov 18, 2021 (1)</a></li>
+                <li><a href="https://musiclab.chromeexperiments.com/Song-Maker/song/4596606566924288"
+                        target="_blank">oct 15, 2021</a></li>
+
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="container bg-faded">
+            <h2>covers</h2>
+            <p>just utau stuff for now. not sure if i'll do any vocal / instrumental covers</p>
+            <h3>utau</h3>
+            <ul>
+                <li>
+                    <p>your reality<br><small>january 2024<br>voicebank: <a
+                                href="http://utau.wikidot.com/utau:yami-ryone" target="_blank">yami ryone</a></small>
+                    </p>
+                    <p>first try at doing stuff with an english utau. came out pretty good honestly</p>
+                    <meowplayer canpause>
+                        <audio src="https://files.catbox.moe/zg6mql.wav" controls></audio>
+                    </meowplayer>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+<aside style="width:20%">
+    <section>
+        <div class="container bg-faded">
+            <center>
+                <h1>volume</h1>
+
+                <input type="range" id="mp-volume" oninput="on_global_volume_update()" min="10" max="100" value="90">
+                <div class="d-flex" style="justify-content: space-between;">
+                    <span>♪</span>
+                    <span>♪♪♪</span>
+                </div>
+            </center>
+        </div>
+    </section>
+</aside>
+
+<script src="/widgets/supermeowplayer/supermeowplayer.js"></script>
+<link rel="stylesheet" href="/widgets/supermeowplayer/supermeowplayer.css">

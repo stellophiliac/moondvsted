@@ -1,3 +1,2 @@
-.DS_Store
-public/music/storage
-archive/
+public
+node_modules
