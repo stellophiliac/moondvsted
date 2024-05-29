@@ -1,5 +1,11 @@
+var moment = require('moment'); // require
+    const { EleventyRenderPlugin } = require("@11ty/eleventy"); 
+
 module.exports = function (eleventyConfig) {
-    var moment = require('moment'); // require
+
+    eleventyConfig.addPlugin(EleventyRenderPlugin);
+
+    //passthrough
 
     eleventyConfig.addPassthroughCopy("src/assets/");
     eleventyConfig.addWatchTarget("src/assets/");
