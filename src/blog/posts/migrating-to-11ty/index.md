@@ -20,6 +20,7 @@ unfortunately expect a lot of maintenance since i have little to no experience w
 * homepage is slightly different
 * blog has a slightly new look, didn't change it much because i do like how zonelets styled it
 * nuked the art page temporarily, i'll figure out how to set it up soon (the gallery i had before was really nice, but the image descriptions wouldn't show up in the modal ... also couldn't figure out how to do captions)
+* old updates have been nuked to prevent broken links
 
 that's sorta it
 
