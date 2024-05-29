@@ -8,7 +8,7 @@ layout: layouts/blog.html
 <p><strong>{{date | formatDate }}</strong></p>
 <p>{{desc}}</p>
 <hr>
-{{content | safe}}
+{{content | safe }}
 
 <div class="blog-footer">
     {% if previousPost %}<span><a href="{{ previousPost.url }}" class="button"><- previous post</a></span>{% endif %}
