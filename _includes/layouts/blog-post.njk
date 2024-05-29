@@ -1,5 +1,5 @@
 ---
-layout: layouts/blog.html
+layout: layouts/blog.njk
 ---
 {% set previousPost = collections.posts | getNextCollectionItem %}
 {% set nextPost = collections.posts | getPreviousCollectionItem %}
@@ -8,7 +8,7 @@ layout: layouts/blog.html
 <p><strong>{{date | formatDate }}</strong></p>
 <p>{{desc}}</p>
 <hr>
-{{content | safe }}
+{{content | safe}}
 
 <div class="blog-footer">
     {% if previousPost %}<span><a href="{{ previousPost.url }}" class="button"><- previous post</a></span>{% endif %}
