@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include 'partials/head.html'%}
+    <link rel="stylesheet" href="/assets/style/style.css">
+    <title>fly me to the moon!</title>
+    <link rel="icon" href="/assets/favicon.ico" type="image/png">
+    <style>
+        #wrapper {
+            max-width: 800px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div></div>
+        </header>
+        <div id="content">
+            {{content | safe}}
+        </div>
+        {% include 'partials/foot.html' %}
+    </div>
+</body>
+</html>
