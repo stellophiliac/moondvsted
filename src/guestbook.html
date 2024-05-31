@@ -3,7 +3,7 @@
         <div class="container bg-faded">
             <h1 style="margin-bottom:0">guestbook</h1>
             <!-- begin wwww.htmlcommentbox.com -->
-            <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading
+            <div id="HCB_comment_box">loading
                 comments...</div>
             <link rel="stylesheet" type="text/css"
                 href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
@@ -15,35 +15,51 @@
 </main>
 
 <style>
-    #HCB_comment_box,
-    #hcb_form_name,
-    #hcb_form_content {
-        font-family: 'Poppins', sans-serif !important
-    }
 
     #HCB_comment_box h3 {
         display: none
     }
 
-    #HCB_comment_box {
-        color: var(text)
-    }
-
-    #hcb_subscribe {
-        color: var(--text)
-    }
-
-    input#hcb_submit {
-        background-color: var(--lighter) !important;
-        color: var(--text) !important
-    }
-
-    .btn.btn-secondary {
-        background-color: var(--text) !important;
-        color: var(--bg) !important
+    #HCB_comment_box,
+    #hcb_form_name,
+    #hcb_form_content,
+    #HCB_comment_box input {
+        font-family: 'Poppins', sans-serif !important
     }
 
     .home-desc {
-        display:none
+        display: none
+    }
+
+    input,
+    textarea {
+        border-radius: 0 !important
+    }
+
+    #hcb_form_website {
+        margin-bottom: 0 !important
+    }
+
+    #hcb_submit {
+        background-color: var(--lighter) !important;
+        border: 0 !important;
+    }
+
+    #hcb_submit:hover {
+        background-color:var(--blurple)!important;
+        color:white!important;
+        transition:background-color 3s
+    }
+
+    .hcb-comment-tb {
+        display: inline-block;
+        background: var(--gradient-h);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    #hcb_subscribe {
+        color: var(--text)!important
     }
 </style>
