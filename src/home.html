@@ -37,9 +37,9 @@
 
             <h2 class="text-center">recent posts</h2>
             <ul class="blog-list">
-                {% for post in collections.posts %}<li class="blog-post"><a href="{{post.url}}">{{post.data.date |
+                {% for post in collections.posts %}<li class="blog-post"><a href="{{post.url}}"><span class="text-mono">{{post.data.date |
                         formatDateShort
-                        }} :: {{post.data.title}}</a>
+                        }} - </span>{{post.data.title}}</a>
                 </li>{% endfor %}
                 <li><a href="/blog/"><span class="text-mono">-> </span> more posts</a></li>
             </ul>
@@ -151,42 +151,15 @@
                     }
                 </style>
                 <center class="text-mono">
-                    <div>
-                        <a href="https://hotlinewebring.club/stel/previous"
-                            style="-webkit-text-fill-color:var(--pink)!important">
-                            &lt;- </a>
-                        <a href="https://hotlinewebring.club/">
-                            hotline webring
-                        </a>
-                        <a href="https://hotlinewebring.club/stel/next"
-                            style="-webkit-text-fill-color:var(--blue)!important">
-                            -&gt;
-                        </a>
-                    </div>
-                    <div class="otswebring">
-                        <a href="https://webring.obeythesystem.com/page?=previous" rel="nofollow">
-                            &lt;- </a>
-                        <a href="https://webring.obeythesystem.com/" rel="nofollow">OBEY THE SYSTEM</a>
-                        <a href="https://webring.obeythesystem.com/page?=next" rel="nofollow">-&gt;</a>
-                    </div>
-                    <div>
-                        <a href="https://stellophiliac.github.io/roboring/stel/previous"> &lt;- </a>
-                        <a href="https://stellophiliac.github.io/roboring">roboring</a>
-                        <a href="https://stellophiliac.github.io/roboring/stel/next"> -&gt; </a>
-                    </div>
+                    {% include 'partials/rings.html' %}
                 </center>
             </div>
         </div>
         <div class="container bg-faded">
             <center>
                 <small>
-                    <p><a href="https://scented.minty.nu/" target="blank">scented</a> // cotton candy<br><a
-                            href="http://cliqued.wings.nu/" target="_blank"
-                            style="background: linear-gradient(90deg, rgba(237,135,135,1) 0%, rgba(231,204,122,1) 25%, rgba(152,215,138,1) 50%, rgba(122,183,211,1) 75%, rgba(191,160,246,1) 100%); background-clip:text; -webkit-background-clip: text;">
-                            rainbow
-                        </a> &#x1F308; <span style="color:#f7cac9">rose quartz</span> & <span style="color:#92a8d1">serenity</span>
-                        <br>
-                        <a href="https://xandra.cc/patrons" target="_blank">matron</a> 🌙 selene<br>
+                    <p>
+                        {% include 'partials/cliques-site.html' %}
                     </p>
                     <p>
                         <a href="http://cliqued.wings.nu/" target="_blank">rock me</a> <img src="/img/rock-me.png"
