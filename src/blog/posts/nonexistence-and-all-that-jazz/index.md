@@ -25,7 +25,7 @@ this isn’t to say that i believe everyone else in my life are “programmed”
 
 i think i lack empathy. i’m not sure because i don’t pay much attention to it, but i find that i sometimes do or say bad things to others because i can’t get it in my head that they’re thinking, feeling people 
 
-![I am not my body, not my mind or my brain (Ha) / Not my thoughts or feelings, I am not my DNA / I am the observer, I'm a witness of life (Hey) / I live in the space between the stars and the sky](./ancient_dreams.png)
+![I am not my body, not my mind or my brain (Ha) / Not my thoughts or feelings, I am not my DNA / I am the observer, I'm a witness of life (Hey) / I live in the space between the stars and the sky](./ancient_dreams.jpg)
 
 my body is me in the way that a monopoly piece is me. it’s my means of interacting with this world, but that’s it. the face i see when i look in the mirror is familiar but unfitting 
 
