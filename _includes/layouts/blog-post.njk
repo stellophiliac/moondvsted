@@ -10,10 +10,10 @@ layout: layouts/blog.njk
 <hr>
 {{content | safe}}
 
+ <br><button class="tinylytics_kudos"></button>
 <div class="blog-footer">
-  <button class="tinylytics_kudos"></button><br><br>
     {% if previousPost %}<span><a href="{{ previousPost.url }}" class="button"><- previous post</a></span>{% endif %}
     <span><a href="/blog/">blog index</a></span>
     {% if nextPost %}<a href="{{ nextPost.url }}" class="button">next post -></a>{% endif %}
 </div>
-<script src="https://tinylytics.app/embed/41fSb2h3y56pJf12q9ak.js?kudos" defer></script>
+<script src="https://tinylytics.app/embed/41fSb2h3y56pJf12q9ak.js?kudos=custom" defer></script>
