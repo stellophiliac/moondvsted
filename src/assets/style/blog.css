@@ -158,3 +158,11 @@ footer {
 .blog-footer span:not(span:last-child)::after {
   content: " | "
 }
+
+/* KUDOS */
+.tinylytics_kudos {
+  font-size: inherit;
+  font-family: inherit;
+  color:inherit;
+  background-color: transparent;
+}
