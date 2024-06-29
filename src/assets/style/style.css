@@ -70,6 +70,7 @@ footer {
 h1:first-child,
 h2:first-child,
 h3:first-child,
+h4:first-child,
 p:first-child {
     margin-top: 0
 }

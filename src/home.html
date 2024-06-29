@@ -2,7 +2,7 @@
 <main>
     <section>
         <div class="container bg-faded">
-            <h2>welcome in!</h2>
+            <h1>welcome in!</h1>
             <p>hello hello, welcome to stel's little corner of the world wide web. make yourself at home,
                 and enjoy your stay!</p>
         </div>
@@ -33,13 +33,22 @@
     </section>
 
     <section>
+        <div class="container bg-faded">
+            <h2>artfight!!</h2>
+            <p>HAPPY ARTFIGHT SEASON!! find me <a href="https://artfight.net/~stel" target="_blank">here (~stel)</a></p>
+            <p>as of writing this (jun 29) i haven't gotten sorted yet, i'll update here once artfight starts (i like letting RNG choose for me)</p>
+        </div>
+    </section>
+
+    <section>
         <div class="container bg-faded h-100">
 
             <h2 class="text-center">recent posts</h2>
             <ul class="blog-list">
-                {% for post in collections.posts %}<li class="blog-post"><a href="{{post.url}}"><span class="text-mono">{{post.data.date |
-                        formatDateShort
-                        }} - </span>{{post.data.title}}</a>
+                {% for post in collections.posts limit:3 %}<li class="blog-post"><a href="{{post.url}}"><span
+                            class="text-mono">{{post.data.date |
+                            formatDateShort
+                            }} - </span>{{post.data.title}}</a>
                 </li>{% endfor %}
                 <li><a href="/blog/"><span class="text-mono">-> </span> more posts</a></li>
             </ul>
