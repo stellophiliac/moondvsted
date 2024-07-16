@@ -12,7 +12,7 @@ layout: layouts/blog.njk
 
  <br><button class="tinylytics_kudos" title="toast this post"></button>
 <div class="blog-footer">
-    {% if previousPost %}<span><a href="{{ previousPost.url }}" class="button"><- previous post</a></span>{% endif %}
+    {% if previousPost %}<span><a href="{{ previousPost.url }}"><- previous post</a></span>{% endif %}
     <span><a href="/blog/">blog index</a></span>
-    {% if nextPost %}<a href="{{ nextPost.url }}" class="button">next post -></a>{% endif %}
+    {% if nextPost %}<a href="{{ nextPost.url }}">next post -></a>{% endif %}
 </div>
