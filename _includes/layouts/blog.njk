@@ -2,7 +2,9 @@
 <html>
 
 <head>
-    <title>astronotes</title>
+    <title>
+        {% if title %}{{title}} | {% endif %} astronotes
+    </title>
     <!-- This specifies the favicon (little icon on the browser tab) -->
     <!-- https://www.deviantart.com/fabledferns/art/F2U-Saturn-pixel-634664732 -->
     <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
