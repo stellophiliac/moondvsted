@@ -1,6 +1,6 @@
 ---
 title: "digital privacy for the average person"
-date: 2024-08-11T1012
+date: 2024-08-20T1012
 ---
 
 this post is just compilation of my personal advice and tips for privacy for the average person (so no encryption or self-hosting stuff that might require a bit more technical knowledge). take my advice with a grain of salt and do your own research and judgement! i'll mainly be focusing on free options for this post, though there are plenty of good paid options as well.
