@@ -14,7 +14,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/img/");
     eleventyConfig.addWatchTarget("src/img/");
 
-    eleventyConfig.addPassthroughCopy("src/");
+    eleventyConfig.addPassthroughCopy("src/**/!(*.njk)");
 
     // filters
     eleventyConfig.addFilter("formatDate", function (value) {
