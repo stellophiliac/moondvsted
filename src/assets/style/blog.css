@@ -44,6 +44,15 @@ img {
   text-align: center;
 }
 
+h3 {
+  font-size: 1.25em;
+}
+
+
+h4 {
+  font-size: 1.125em;
+}
+
 @media only screen and (min-width: 600px) {
   .small {
     max-width: 60%;
