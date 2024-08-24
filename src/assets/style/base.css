@@ -1,27 +1,47 @@
 @font-face {
-    font-family: 'Jetbrains Mono';
-    src: url(../fonts/JetBrainsMono.ttf);
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url(../fonts/Poppins-Regular.ttf);
+    font-family: 'JetBrains Mono';
+    src: url('/assets/fonts/JetBrainsMono-Regular.woff2') format('woff2'),
+        url('/assets/fonts/JetBrainsMono-Regular.woff') format('woff');
     font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url(../fonts/Poppins-Medium.ttf);
-    font-weight:500
+    src: url('/assets/fonts/Poppins-Medium.woff2') format('woff2'),
+        url('/assets/fonts/Poppins-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url(../fonts/Poppins-SemiBold.ttf);
-    font-weight: bold;
+    src: url('/assets/fonts/Poppins-Regular.woff2') format('woff2'),
+        url('/assets/fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
+@font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins-SemiBold.woff2') format('woff2'),
+        url('/assets/fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('/assets/fonts/PressStart2P-Regular.woff2') format('woff2'),
+        url('/assets/fonts/PressStart2P-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
     --width: 1250px;
