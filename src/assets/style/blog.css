@@ -69,7 +69,7 @@ h4 {
 header li a::before {
   background: none;
   -webkit-transition: none;
-  transition:none
+  transition: none
 }
 
 /*main is the rectangle that has contains everything but the background!*/
@@ -112,11 +112,11 @@ header li {
 header li a {
   color: var(--faded);
   text-decoration: none;
-  background:none;
+  background: none;
   background-clip: inherit;
-  -webkit-background-clip:inherit;
+  -webkit-background-clip: inherit;
   -webkit-text-fill-color: inherit;
-  font-weight:bold
+  font-weight: bold
 }
 
 header li a:hover {
@@ -134,7 +134,7 @@ header li a:hover {
 }
 
 .blog-list li {
-  margin-bottom:0.75em
+  margin-bottom: 0.75em
 }
 
 .moreposts {
@@ -161,7 +161,7 @@ footer {
 
 .blog-footer {
   text-align: center;
-  margin-top:1.5em
+  margin-top: 1.5em
 }
 
 .blog-footer span:not(span:last-child)::after {
@@ -172,8 +172,20 @@ footer {
 .tinylytics_kudos {
   font-size: inherit;
   font-family: inherit;
-  color:inherit;
+  color: inherit;
   background-color: transparent;
-  border:0;
-  background-color: var(--lighter);
+  border: 0;
+}
+
+.tinylytics_kudos::before {
+  content: '';
+  mask: url(/assets/chevrons-up.svg) no-repeat 50% 50%;
+  mask-size: cover;
+  background-color: var(--text);
+  display: inline-block;
+  height: 1.5em;
+  width: 1em;
+  position: relative;
+  top: 0.35em;
+  margin-right: 0.25em
 }
