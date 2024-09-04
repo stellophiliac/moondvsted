@@ -78,21 +78,6 @@ body {
     margin: 0;
 }
 
-
-/* sidebar */
-ul.navLinks {
-    list-style-type: none;
-    margin: 0;
-    padding-left: 0;
-}
-
-ul.navLinks li:before {
-    content: url(/assets/star.gif);
-    margin-right: 0.75em;
-    position: relative;
-    top: 3px;
-}
-
 .container {
     padding: 0.75em
 }
