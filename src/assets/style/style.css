@@ -61,6 +61,23 @@ footer {
     margin-top:0.5em;
 }
 
+.navLinks {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.navLinks li ul {
+    list-style-type: none;
+}
+
+.navLinks li:before {
+    content: url(/assets/star.gif);
+    margin-right: 0.75em;
+    position: relative;
+    top: 3px;
+}
+
 /* LAYOUT END */
 
 /* heading fuckery */
@@ -218,6 +235,10 @@ code {
 
     .navLinks li:first-child::before {
         display: none
+    }
+
+    .navLinks li ul {
+        display: none;
     }
 
 }
