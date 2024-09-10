@@ -17,23 +17,29 @@ members = [
         country: "United States",
         favchar: "Lamplighter, Silver, Niko"
     },
-    { 
+    {
         name: "Lindsay",
         country: "United States",
         favchar: "Everyone"
     },
     {
-        name:"Maggie",
+        name: "Maggie",
         country: "United States",
-        favchar:"Niko",
-        site:"https://magneticdogz.neocities.org"
+        favchar: "Niko",
+        site: "https://magneticdogz.neocities.org"
     },
     {
-        name:"Flonne",
+        name: "Flonne",
         country: "United States",
         email: "flonnepocket@gmail.com",
         site: "https://vivarism.net/",
         favchar: "Niko, The Player"
+    },
+    {
+        name: "Leith",
+        country: "United States",
+        site: "https://leizy8499.neocities.org",
+        favchar: "Niko"
     }
-    
+
 ]
