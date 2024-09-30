@@ -40,6 +40,12 @@ members = [
         country: "United States",
         site: "https://leizy8499.neocities.org",
         favchar: "Niko"
+    },
+    {
+        name: "Veyther",
+        country: "South Africa",
+        site: "veyther.neocities.org",
+        email: "Veyther@proton.me",
+        favchar: "Niko, Maize"
     }
-
 ]
