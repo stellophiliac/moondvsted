@@ -4,7 +4,7 @@ members = [
         country: "China",
         email: "stel@disroot.org",
         site: "https://moondvsted.neocities.org",
-        favchar: "Lamplighter & George"
+        favchar: "Lamplighter, George"
     },
     {
         name: "Marisa",
@@ -47,5 +47,11 @@ members = [
         site: "veyther.neocities.org",
         email: "Veyther@proton.me",
         favchar: "Niko, Maize"
+    },
+    {
+        name: "DinPixels",
+        country: "Philippines",
+        site: "https://dinpixels.neocities.org/",
+        favchar: "Niko, Silver"
     }
 ]
