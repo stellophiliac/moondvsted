@@ -53,5 +53,11 @@ members = [
         country: "Philippines",
         site: "https://dinpixels.neocities.org/",
         favchar: "Niko, Silver"
+    },
+    {
+        name: "Calupis",
+        country: "United States",
+        site: "https://calupis.neocities.org",
+        favchar: "Niko"
     }
 ]
