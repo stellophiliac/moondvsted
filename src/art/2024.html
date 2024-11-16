@@ -1,0 +1,35 @@
+---
+title: 2024
+---
+<section>
+    <div class="container bg-faded">
+        <h2>polished works</h2>
+        <div class="gallery">
+            {% for piece in art.2024.polish %}
+            <div class="gallery-item">
+                <a href="{{ piece.img }}" data-fancybox="gallery-polish"
+                    data-caption="{{ piece.date }}{% if piece.caption %} — {{ piece.caption }}{% endif %}">
+                    <img src="{% if piece.thumb %}{{ piece.thumb }}{% else %}{{ piece.img }}{% endif %}"
+                        alt="{{ piece.desc }}">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container bg-faded">
+        <h2>sketches & doodles</h2>
+        <div class="gallery">
+            {% for piece in art.2024.sketch %}
+            <div class="gallery-item">
+                <a href="{{ piece.img }}" data-fancybox="gallery-sketch"
+                    data-caption="{{ piece.date }}{% if piece.caption %} — {{ piece.caption }}{% endif %}">
+                    <img src="{% if piece.thumb %}{{ piece.thumb }}{% else %}{{ piece.img }}{% endif %}"
+                        alt="{{ piece.desc }}">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
