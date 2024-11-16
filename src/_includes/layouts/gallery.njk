@@ -1,0 +1,28 @@
+---
+layout: layouts/base-thin.njk
+---
+<link rel="stylesheet" href="/assets/style/gallery.css">
+<main>
+    <section>
+        <div class="container bg-faded">
+            <h1>{{ title }} <a href="/art/">⤴</a></h1>
+            {% if blurb %}<p>{{ blurb | safe }}</p>{% endif %}
+        </div>
+    </section>
+    {{ content | safe }}
+    <section>
+        <div class="container bg-faded text-center text-mono">
+            <a href="#head">↑ to top</a>
+        </div>
+    </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+<script>
+    Fancybox.bind("[data-fancybox]", {
+        Thumbs: {
+            type: "classic"
+        }
+    });
+</script>

@@ -1,0 +1,36 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5em
+}
+
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--lighter);
+    aspect-ratio: 1/1;
+
+    a, img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer
+    }
+
+    a::before {
+        display:none
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
