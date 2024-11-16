@@ -11,10 +11,13 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("src/assets/");
     eleventyConfig.addWatchTarget("src/assets/");
-    eleventyConfig.addPassthroughCopy("src/img/");
-    eleventyConfig.addWatchTarget("src/img/");
+    eleventyConfig.addPassthroughCopy("src/media/");
+    eleventyConfig.addPassthroughCopy("src/blog/");
+    eleventyConfig.addPassthroughCopy("src/writing/");
 
-    eleventyConfig.addPassthroughCopy("src/**/!(*.njk)");
+    eleventyConfig.addPassthroughCopy("png");
+    eleventyConfig.addPassthroughCopy("jpg");
+    eleventyConfig.addPassthroughCopy("webp");
 
     // filters
     eleventyConfig.addFilter("formatDate", function (value) {
