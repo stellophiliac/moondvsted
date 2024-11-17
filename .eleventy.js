@@ -15,6 +15,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/blog/");
     eleventyConfig.addPassthroughCopy("src/writing/");
     eleventyConfig.addPassthroughCopy("src/widgets/");
+    eleventyConfig.addPassthroughCopy("src/fan/");
 
     eleventyConfig.addPassthroughCopy("png");
     eleventyConfig.addPassthroughCopy("jpg");
