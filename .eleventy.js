@@ -18,6 +18,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("png");
     eleventyConfig.addPassthroughCopy("jpg");
     eleventyConfig.addPassthroughCopy("webp");
+    eleventyConfig.addPassthroughCopy("js");
 
     // filters
     eleventyConfig.addFilter("formatDate", function (value) {
