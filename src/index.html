@@ -24,7 +24,6 @@ layout: ""
 
     #landing {
         max-width: 100vw;
-        padding: 2em 0
     }
 
     a#entry:hover {
@@ -35,13 +34,13 @@ layout: ""
         display: none
     }
 
-    #landing a img {
+    #entry img {
         max-width: 75%;
         transition-duration: 0.75s;
         animation-timing-function: ease-out;
     }
 
-    #landing a img:hover {
+    #entry img:hover {
         content: url(/assets/title2.png);
         transform: scale(1.025);
         transition-duration: 0.75s;
@@ -64,12 +63,6 @@ layout: ""
         </a><br>
 
         <div style="background-color:var(--bg)">
-            <div class="text-center">
-                <img src="https://files.catbox.moe/yg397b.png" alt="tested on Firefox">
-                <img src="https://files.catbox.moe/w72i53.gif" alt="best viewed with a computer"><br>
-                javascript is used to load assets!
-            </div>
-
             <div id="groups">
                 {% include 'partials/rings.html' %}<br>
                 {% include 'partials/cliques-site.html' %}
