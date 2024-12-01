@@ -59,5 +59,17 @@ members = [
         country: "United States",
         site: "https://calupis.neocities.org",
         favchar: "Niko"
+    },
+    {
+        name: "Raspergine",
+        country: "Spain",
+        site: "https://raspergine.neocities.org/",
+        favchar: "Cedric, Prophetbot"
+    },
+    {
+        name: "Jack",
+        country: "United States",
+        site: "https://rollergirls.neocities.org/",
+        favchar: "Silver"
     }
 ]
