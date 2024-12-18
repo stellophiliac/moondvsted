@@ -33,7 +33,7 @@
 
 
 <section>
-    <marquee onmouseover="this.stop()" onmouseout="this.start()">
+    <div class="marquee pauser">
         <a href="http://www.mabsland.com/Adoption.html" target="_blank"><img src="https://files.catbox.moe/tfa8lv.gif"
                 height="31px" width="88px" alt="web rating: 14"></a>
         <a href="https://neocities.org/" target="_blank"><img src="https://files.catbox.moe/a9muor.png"
@@ -48,11 +48,12 @@
         <iframe src="//incr.easrng.net/badge?key=stel" style="background: url(//incr.easrng.net/bg.gif)"
             title="increment badge" width="88" height="31" frameborder="0"></iframe>
 
-    </marquee>
-    <marquee onmouseover="this.stop()" onmouseout="this.start()" direction="right">
+        </div>
+    <div class="marquee pauser right">
         <a href="/fan/oneshot/"><img src="/fan/oneshot/codes/88x31-1.png" alt="oneshot fanlisting" title="OneShot"></a>
         <small class="text-mono"> <- mine | others' -> </small>
         {% include 'partials/fanlistings.html' %}
         <small class="text-mono"> <- fanlistings</small>
-    </marquee>
+    </div>
+    <script>marquee.setup()</script>
 </section>
