@@ -124,6 +124,11 @@ br.clear {
     margin-left: 1em
 }
 
+.block-center {
+    display: block;
+    margin: unset auto
+}
+
 .scroll {
     overflow: auto
 }

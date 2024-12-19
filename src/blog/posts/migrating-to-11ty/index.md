@@ -6,12 +6,12 @@ date: 2024-05-29
 
 hi! this site is using [11ty](https://www.11ty.dev/) now!
 
-there honestly weren't any problems with my previous setup (and i severely questioned the switch while working on it), but this will reduce some friction for me, *especially* for writing blog posts (they're plain markdown now, and i don't have to update the blog index manually anymore!). ever wonder why you don't hear much from me? that's cause 
+there honestly weren't any problems with my previous setup (and i severely questioned the switch while working on it), but this will reduce some friction for me, *especially* for writing blog posts (they're plain markdown now, and i don't have to update the blog index manually anymore!). ever wonder why you don't hear much from me? that's cause
 
 1. the whole process is kind of tedious
 2. i'm ... not a person with interesting thoughts (or at least the ability to articulate them)
 
-hopefully i'll be writing more soon! 
+hopefully i'll be writing more soon!
 
 unfortunately expect a lot of maintenance since i have little to no experience with static site generators. my file structure is slightly fucked but it's somehow better than what i used to have
 
@@ -30,12 +30,10 @@ hi i need to lament about this process.
 the coding part wasn't too bad! there were a few bumps in the way, but overall it was pretty smooth sailing. it just took a while because i'm uh . lazy
 
 #### filestructure
-<center>
-<figure style="max-width:200px">
+<figure style="max-width:200px" class="block-center">
 <img src="./filestructure.png" alt="screenshot of this site's filestructure in vscodium">
 <figcaption>goodness me</figcaption>
 </figure>
-</center>
 
 *"i mislike undecision as much as e're a man"* – candidate for world's worst father, or something <small>(anse from as i lay dying)</small>
 
@@ -48,13 +46,11 @@ weird thing is that i've got an /assets/ folder with images and an /img/ folder 
 i've got a "base.css" with basic stuff like colors and link styling which i @import into my other files. before this i had the basic styling copypasted into my blog stylesheet which was.. Weird i think
 
 ### actually getting the site on neocities
-<center>
-<img src="./actions.png" alt="screenshot of the github actions for this site with a shit ton of failed runs" style="max-width:300px">
-</center>
+<img src="./actions.png" alt="screenshot of the github actions for this site with a shit ton of failed runs" style="max-width:300px" class="block-center">
 
 good *god*
 
-okay so i use [deploy-to-neocities](https://github.com/bcomnes/deploy-to-neocities/tree/master) right. it's great! 
+okay so i use [deploy-to-neocities](https://github.com/bcomnes/deploy-to-neocities/tree/master) right. it's great!
 
 however i had to spend multiple hours figuring out why the Fuck this would not work since my files refused to upload
 
