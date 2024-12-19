@@ -71,5 +71,16 @@ members = [
         country: "United States",
         site: "https://rollergirls.neocities.org/",
         favchar: "Silver"
+    },
+    {
+        name: "Aurora",
+        country: "United States",
+        site: "https://aurorawho.neocities.org/",
+        favchar: "Niko, Silver"
+    },
+    {
+        name: "H",
+        country: "Vietnam",
+        favchar: "Niko"
     }
 ]
