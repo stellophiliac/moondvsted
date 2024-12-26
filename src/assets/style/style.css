@@ -58,7 +58,7 @@ section {
 
 footer {
     text-align: center;
-    margin-top:0.5em;
+    margin-top: 0.5em;
 }
 
 .navLinks {
@@ -82,22 +82,22 @@ footer {
 
 /* heading fuckery */
 
-
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-p:first-child {
-    margin-top: 0
+h1,
+h2,
+h3,
+h4 {
+    &:first-child {
+        margin-top: 0
+    }
 }
 
-h1:last-child {
-    margin-bottom:0
+h1,
+p {
+    &:last-child {
+        margin-bottom: 0
+    }
 }
 
-p:last-child {
-    margin-bottom: 0
-}
 /* headings end*/
 
 /*todo*/
@@ -170,8 +170,8 @@ a.btn:hover span {
 
 pre {
     background-color: var(--lighter);
-    padding:0.75em;
-    overflow:auto
+    padding: 0.75em;
+    overflow: auto
 }
 
 code {
@@ -182,6 +182,27 @@ code {
 /* MOBILE */
 
 @media only screen and (max-width: 992px) {
+
+    .col-lg+.col-lg {
+
+        h1:first-child {
+            margin-top: 0.67em
+        }
+
+        h2:first-child {
+            margin-top: 0.83em
+        }
+
+        h3:first-child {
+            margin-top: 1em
+        }
+
+        h4:first-child {
+            margin-top: 1.33em
+        }
+
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -241,8 +262,46 @@ code {
         display: none;
     }
 
+    .col-md+.col-md {
+
+        h1:first-child {
+            margin-top: 0.67em
+        }
+
+        h2:first-child {
+            margin-top: 0.83em
+        }
+
+        h3:first-child {
+            margin-top: 1em
+        }
+
+        h4:first-child {
+            margin-top: 1.33em
+        }
+
+    }
+
 }
 
 @media only screen and (max-width:480px) {
+    .col-sm+.col-sm {
 
+        h1:first-child {
+            margin-top: 0.67em
+        }
+
+        h2:first-child {
+            margin-top: 0.83em
+        }
+
+        h3:first-child {
+            margin-top: 1em
+        }
+
+        h4:first-child {
+            margin-top: 1.33em
+        }
+
+    }
 }
