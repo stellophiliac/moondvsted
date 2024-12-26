@@ -92,12 +92,16 @@ body {
 
 h1,
 h2,
-h3,h4,h5,h6 {
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Jetbrains Mono', monospace
 }
 
-summary h2, summary h3 {
-    margin-bottom:0
+summary h2,
+summary h3 {
+    margin-bottom: 0
 }
 
 main h1 {
@@ -137,10 +141,18 @@ img {
     max-width: 100%
 }
 
+figure {
+    margin: 1em 0
+}
+
 hr {
     border: 0.5px solid;
     border-image: var(--gradient-h) 1;
     opacity: 0.5
+}
+
+abbr {
+    text-decoration: none
 }
 
 .text-mono {
@@ -219,9 +231,8 @@ ul {
 
 li::marker {
     font-family: 'jetbrains mono';
-    color:var(--pinkple);
-    font-weight:bold
-
+    color: var(--pinkple);
+    font-weight: bold
 }
 
 ul:last-child {
@@ -294,11 +305,15 @@ a::-moz-selection {
     flex: 1
 }
 
+.gutters {
+    gap: calc(var(--padding)*2)
+}
+
 /* MOBILE */
 
 @media only screen and (max-width: 992px) {
     .col-lg {
-        width: 100%!important
+        width: 100% !important
     }
 }
 
@@ -316,10 +331,10 @@ a::-moz-selection {
 
 @media only screen and (max-width:480px) {
     .hide-sm {
-        display: none!important
+        display: none !important
     }
 
     .col-sm {
-        width: 100%!important
+        width: 100% !important
     }
 }
