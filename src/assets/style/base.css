@@ -130,7 +130,7 @@ br.clear {
 
 .block-center {
     display: block;
-    margin: unset auto
+    margin: auto
 }
 
 .scroll {
