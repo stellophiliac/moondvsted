@@ -5,6 +5,7 @@ dec 27, 2024:
   (i replaced them with `h2`). it feels weird to me, i dunno
 - removed the lastFM thingie on my homepage for now.
 - added some cute buttons to the [colophon](/colophon)
+- i wrote an 100-word drabble today! read it [here](https://archiveofourown.org/works/61702222) on ao3, or look for "french braids" on the [writing page under oneshot](/writing/#fan-oneshot)
 
 ---
 
