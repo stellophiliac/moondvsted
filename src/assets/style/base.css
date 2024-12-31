@@ -241,6 +241,17 @@ ul:last-child {
 
 /*lists end*/
 
+/* blockquotes */
+
+blockquote {
+    margin: 1em 0;
+    display: flex;
+    padding-left: 1em;
+    border-left: 2px solid var(--border)
+}
+
+/* blockquotes end */
+
 /* selection */
 ::-moz-selection {
     background: var(--blurple);
