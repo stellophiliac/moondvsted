@@ -1,3 +1,7 @@
+dec 31, 2024: hey, happy new year! here's a [blog post](/blog/posts/newyear25/)
+
+---
+
 dec 27, 2024:
 
 - updated my HTML and CSS to hopefully be more valid. it might not work on outdated browsers due to nesting, but it's a
