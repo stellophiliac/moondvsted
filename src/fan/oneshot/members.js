@@ -82,5 +82,11 @@ members = [
         name: "H",
         country: "Vietnam",
         favchar: "Niko"
+    },
+    {
+        name: "Fennelstar",
+        country: "United States",
+        site: "https://fennelstars-wonderland.neocities.org/",
+        favchar: "Prototype, Niko"
     }
 ]
