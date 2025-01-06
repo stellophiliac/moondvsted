@@ -1,3 +1,7 @@
+jan 06, 2025: added the [2025 gallery](/art/2025) and did some edits to the art pages in general
+
+---
+
 dec 31, 2024: hey, happy new year! here's a [blog post](/blog/posts/newyear25/)
 
 ---

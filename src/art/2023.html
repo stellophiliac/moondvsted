@@ -6,13 +6,7 @@ title: 2023
         <h2>polished works</h2>
         <div class="gallery">
             {% for piece in art.2023.polish %}
-            <div class="gallery-item">
-                <a href="{{ piece.img }}" data-fancybox="gallery-polish"
-                    data-caption="{{ piece.date }}{% if piece.caption %} — {{ piece.caption }}{% endif %}">
-                    <img src="{% if piece.thumb %}{{ piece.thumb }}{% else %}{{ piece.img }}{% endif %}"
-                        alt="{{ piece.desc }}">
-                </a>
-            </div>
+            {% include 'partials/gallery-grid.html' %}
             {% endfor %}
         </div>
     </div>
@@ -22,13 +16,7 @@ title: 2023
         <h2>sketches & doodles</h2>
         <div class="gallery">
             {% for piece in art.2023.sketch %}
-            <div class="gallery-item">
-                <a href="{{ piece.img }}" data-fancybox="gallery-sketch"
-                    data-caption="{{ piece.date }}{% if piece.caption %}. {{ piece.caption }}{% endif %}">
-                    <img src="{% if piece.thumb %}{{ piece.thumb }}{% else %}{{ piece.img }}{% endif %}"
-                        alt="{{ piece.desc }}">
-                </a>
-            </div>
+            {% include 'partials/gallery-grid.html' %}
             {% endfor %}
         </div>
     </div>

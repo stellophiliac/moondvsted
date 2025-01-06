@@ -6,6 +6,7 @@ layout: layouts/base-thin.njk
     <section>
         <div class="container bg-faded">
             <h1>{{ title }} <a href="/art/">⤴</a></h1>
+            {% if update %}<p>last updated: {{ update | safe }}</p>{% endif %}
             {% if blurb %}<p>{{ blurb | safe }}</p>{% endif %}
         </div>
     </section>
@@ -19,10 +20,21 @@ layout: layouts/base-thin.njk
 
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
 <script>
     Fancybox.bind("[data-fancybox]", {
         Thumbs: {
             type: "classic"
+        },
+        Images: {
+            zoom: false,
+        },
+        compact: false,
+        on: {
+            reveal: function (fancybox, slide) {
+                slide.imageEl.alt = slide.thumbEl.alt || "";
+            }
         }
     });
 </script>
