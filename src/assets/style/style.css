@@ -178,6 +178,7 @@ pre {
 
 code {
     font-family: 'Jetbrains Mono', monospace;
+    background-color: var(--lighter);
 }
 
 
@@ -187,19 +188,19 @@ code {
 
     .col-lg+.col-lg {
 
-        > h1:first-child {
+        >h1:first-child {
             margin-top: 0.67em
         }
 
-        > h2:first-child {
+        >h2:first-child {
             margin-top: 0.83em
         }
 
-        > h3:first-child {
+        >h3:first-child {
             margin-top: 1em
         }
 
-        > h4:first-child {
+        >h4:first-child {
             margin-top: 1.33em
         }
 
@@ -266,19 +267,19 @@ code {
 
     .col-md+.col-md {
 
-        > h1:first-child {
+        >h1:first-child {
             margin-top: 0.67em
         }
 
-        > h2:first-child {
+        >h2:first-child {
             margin-top: 0.83em
         }
 
-        > h3:first-child {
+        >h3:first-child {
             margin-top: 1em
         }
 
-        > h4:first-child {
+        >h4:first-child {
             margin-top: 1.33em
         }
 
@@ -289,19 +290,19 @@ code {
 @media only screen and (max-width:480px) {
     .col-sm+.col-sm {
 
-        > h1:first-child {
+        >h1:first-child {
             margin-top: 0.67em
         }
 
-        > h2:first-child {
+        >h2:first-child {
             margin-top: 0.83em
         }
 
-        > h3:first-child {
+        >h3:first-child {
             margin-top: 1em
         }
 
-        > h4:first-child {
+        >h4:first-child {
             margin-top: 1.33em
         }
 
