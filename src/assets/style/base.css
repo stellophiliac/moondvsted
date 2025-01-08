@@ -252,6 +252,15 @@ blockquote {
 
 /* blockquotes end */
 
+/* code */
+
+code {
+    font-family: 'Jetbrains Mono', monospace;
+    background-color: var(--lighter);
+}
+
+/* code end */
+
 /* selection */
 ::-moz-selection {
     background: var(--blurple);

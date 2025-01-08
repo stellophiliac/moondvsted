@@ -176,11 +176,6 @@ pre {
     overflow: auto
 }
 
-code {
-    font-family: 'Jetbrains Mono', monospace;
-    background-color: var(--lighter);
-}
-
 
 /* MOBILE */
 
