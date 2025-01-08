@@ -1,3 +1,7 @@
+jan 07, 2025: new [blog post](/blog/posts/perfectionism-and-indecision/)! this one's short and sweet
+
+---
+
 jan 06, 2025: added the [2025 gallery](/art/2025) and did some edits to the art pages in general
 
 ---
