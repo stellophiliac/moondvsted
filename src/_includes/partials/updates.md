@@ -1,7 +1,7 @@
 jan 10, 2025:
 
 - the [2025 reading log](/reading/log/2025/) is up! not much in there for now, though.
-- i wrote a new thing! look for "and i don't notice a thing" on, [the writing page](/writing/#og-prose), in the prose section under original works
+- i wrote a new thing! look for "and i don't notice a thing" on [the writing page](/writing/#og-poetry), in the poetry section under original works
 
 ---
 
