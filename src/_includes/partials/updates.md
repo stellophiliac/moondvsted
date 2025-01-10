@@ -1,3 +1,7 @@
+jan 10, 2025: the [2025 reading log](/reading/log/2025/) is up! not much in there for now, though.
+
+---
+
 jan 07, 2025: new [blog post](/blog/posts/perfectionism-and-indecision/)! this one's short and sweet
 
 ---
